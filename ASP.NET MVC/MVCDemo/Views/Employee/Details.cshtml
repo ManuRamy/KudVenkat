@@ -1,0 +1,45 @@
+﻿@model MVCDemo.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>GetEmployeeDetails</title>
+</head>
+<body>
+    <div> 
+		<table style="font-family:Arial">
+			<tr>
+				<td>
+					<b>Employee ID:</b>
+				</td>
+				<td>
+					@Model.EmployeeID
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Name</b>
+				</td>
+				<td>
+					@Model.Name
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Gender</b>
+				</td>
+				<td>
+					@Model.Gender
+				</td>
+			</tr>
+		</table>
+
+		@Html.ActionLink("Back to main page", "Index")
+    </div>
+</body>
+</html>

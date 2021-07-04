@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MVCDemo.Models.Employee>
+@using MVCDemo.Models;
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+		<h2>Employee List</h2>
+		<ul>
+			@foreach (Employee employee in @Model)
+			{
+				<li>
+					@Html.ActionLink(employee.Name,"Details",new { id=employee.EmployeeID})
+				</li>
+			}
+
+		</ul>
+    </div>
+</body>
+</html>
